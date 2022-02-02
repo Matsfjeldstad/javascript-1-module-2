@@ -94,6 +94,86 @@ function hoverListItem(event) {
     console.log(event.target.dataset.animal);
 }
 
+// Question 7
+
+// switch case
+
+
+const animal = "elephant";
+
+switch (animal) {
+    // if animal is a cat case 1
+    // if animal is a cow case 2
+    // if animal is a bird case 3
+    // else default
+
+    case "cat":
+        console.log("Meow meow");
+        break;
+    case "cow":
+        console.log("Moo");
+        break;
+    case "bird":
+        console.log("tweet");
+        break;
+    default:
+        console.log("This animal doesn't have a sound");
+}
+
+// Question 8 go again on setInterval
+
+// string "hesham"
+
+// "hesham"
+// "hesham"
+// "hesham"
+// "hesham"
+// "hesham"
+
+
+const word = "Noroff";
+let count = 1;
+function logMyWord(){
+    // if my count is equal to 5
+    // clear my interval
+
+    if(count === 5){
+        clearInterval(wordTimer)
+    }
+    console.log(count + " " + word);
+    count = count + 1;
+}
+
+let wordTimer = setInterval(logMyWord, 1000);
+//
+
+// let wordTimer = setInterval(function (){
+//     // if my count is equal to 5
+//     // clear my interval
+//
+//     if(count === 5){
+//         clearInterval(wordTimer)
+//     }
+//     console.log(count + " " + word);
+//     count = count + 1;
+// }, 1000);
+
+
+// Question 9 play with setTimeout
+
+// select the element
+
+const containerDiv = document.querySelector(".container");
+
+
+function updateDivAfterTwoSeconds() {
+    containerDiv.innerHTML = "Hello I am updated";
+}
+
+setTimeout(updateDivAfterTwoSeconds, 2000);
+
+
+
 
 
 
