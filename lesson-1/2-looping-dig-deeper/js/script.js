@@ -3,7 +3,7 @@
 // over and over or looping through arrays and nested objects.
 
 // Common to all of them is we first specify under what conditions
-// the loop or iteration should run in the statement declaration.
+// the loop or iteration should run in the statement declaration. let i = 0
 // e.g i <= 10 or i < 10 or i < arr.length (Number of elements in the array)
 
 // And then we specify what should happen at each iteration in the
@@ -20,6 +20,7 @@
 
 const stuff = ["piggy", "headlamp", "pen", "pencil", "eraser", "water bottle"];
 
+<<<<<<< HEAD
 // a. selcet the article
 // b.create a tag using Javascript ul
 // c. loop on the array
@@ -55,6 +56,66 @@ stuff.forEach((item) => {
 });
 
 article.append(stufflist);
+=======
+// 1
+// a. select the article DONE
+// b. create a tag using JavaScript ul Done
+// c. loop on the array Done
+// d. create another tag li
+// e. add the items in the array to the inner html of this tag
+// f. add all the new tags in the parent tag. ul DONE
+// add everything in the article tag ul >> inside the article tag
+
+const article = document.querySelector("article");
+
+let stuffList = document.createElement("ul");
+//
+// for (let i = 0; i < stuff.length; i++){
+//     let listItem = document.createElement("li");
+//     listItem.innerHTML = stuff[i];
+//     stuffList.append(listItem);
+// }
+
+// item of array
+// Modern JavaScript
+
+// for of
+// keep iterating though the array so far if you have items inside.
+//
+for (const item of stuff) {
+    let listItem = document.createElement("li");
+    listItem.innerHTML = item;
+    stuffList.append(listItem);
+}
+
+
+// forEach
+
+stuff.forEach((item) => {
+    let listItem = document.createElement("li");
+    listItem.innerHTML = item;
+    stuffList.append(listItem);
+});
+
+
+stuff.forEach(function () {
+    // do stuff here
+});
+
+stuff.forEach(() => {
+    // do stuff here
+});
+
+
+//
+// <ul>
+//     <li></li>
+//     <li></li>
+//     <li></li>
+//     <li></li>
+// </ul>
+
+>>>>>>> upstream/main
 
 const nestedObjects = {
   item01: {
@@ -89,9 +150,28 @@ const nestedObjects = {
   },
 };
 
+<<<<<<< HEAD
 for (const singelObject in nestedObjects) {
   let listItem = document.createElement("li");
   listItem.innerHTML = `name: ${nestedObjects[singelObject].name}`;
   stufflist.append(listItem);
 }
 article.append(stufflist);
+=======
+
+// 7. What about objects ,
+// Does Modern JavaScript gives us something new we can use.
+// YES it is
+
+// for... in loop and objects
+
+// looping on an object
+
+for (let singleObject in nestedObjects) {
+    let listItem = document.createElement("li");
+    listItem.innerHTML = `Name: ${nestedObjects[singleObject].name}`;
+    stuffList.append(listItem);
+}
+
+article.append(stuffList);
+>>>>>>> upstream/main
